@@ -15,15 +15,18 @@ Suggests:
     covr,
     spelling,
     withr
-Description: Manage configuration values across multiple environments (e.g.
-  development, test, production). Read values using a function that determines
+Description: This is a fork of the rstudio/config package. It includes a save and check function, but
+  otherwise does not change the package. The original description is: Manage configuration values across
+  multiple environments (e.g. development, test, production). Read values using a function that determines
   the current environment and returns the appropriate value.
 License: GPL-3
 URL: https://github.com/rstudio/config
 BugReports: https://github.com/rstudio/config/issues
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-US
 Config/testthat/edition: 3
+Remotes: 
+  steveneschrich/config
