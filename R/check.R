@@ -7,7 +7,9 @@
 #' @export
 #'
 #' @examples
-#'
+#'  \dontrun{
+#'  check("config_file","reference_file")
+#'  }
 check <- function(config, reference) {
   all(names(unlist(reference)) %in% names(unlist(config)))
 }
