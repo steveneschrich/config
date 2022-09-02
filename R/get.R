@@ -111,7 +111,7 @@ get <- function(value = NULL,
 
   # return either the entire config or a requested value
   if (!is.null(value))
-    active_config[[value]]
+    extract_config(active_config, key = value)
   else
     structure(active_config, config = config, file = file)
 }
