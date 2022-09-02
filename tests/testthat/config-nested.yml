@@ -1,12 +1,14 @@
 default:
   color: "red"
-  shape: "square"
   textures:
     smoothness: "rough"
     regularity: "not"
     variability:
       skewness: 5
       kurtosis: 3
+      shape: "triangle"
+    shape: "rectangle"
+  shape: "square"
 
 development:
   shape: "triangle"

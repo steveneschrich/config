@@ -14,4 +14,5 @@ test_that("nested configuration file can be loaded", {
   expect_equal(extract_config(conf, "variability"), conf$textures$variability)
   expect_equal(extract_config(conf, "skewness"), conf$textures$variability$skewness)
   expect_equal(extract_config(conf, "smoothness"), conf$textures$smoothness)
+  expect_equal(extract_config(extract_config(conf, "variability"),"shape"), conf$textures$variability$shape)
 })
