@@ -22,8 +22,11 @@ get.d <- function(dir, pattern="*.yml", ...) {
 
   # Load all configuration
   # We are trying to use package config, which does allow a merge of configuration options.
-  conf <- list.files(dir, pattern=pattern, full.names=TRUE) |>
-    purrr::map(~get(file=., ...)) |>
+  conf <- purrr::map(
+    list.files(dir, pattern=pattern, full.names=TRUE),
+    function(.x) {
+      get(file=.x, ...)
+    }) |>
     purrr::reduce(merge)
 
   conf
