@@ -1,0 +1,29 @@
+default:
+  color: "red"
+  shape: "square"
+  textures:
+    smoothness: "rough"
+    regularity: "not"
+    variability:
+      skewness: 5
+      kurtosis: 3
+
+development:
+  shape: "triangle"
+
+test:
+  inherits: development
+  color: "blue"
+
+production:
+  color: "green"
+  shape: "circle"
+
+dynamic:
+  color: !expr paste("orange")
+  nested:
+    shape: !expr paste("circle")
+    taste: !expr paste("sweet")
+
+error:
+  color: !expr stop("this should not be evaluated")
