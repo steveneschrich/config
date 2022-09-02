@@ -21,7 +21,7 @@
 #'
 #' @examples
 #'
-#' extract_values(list(l11=list(
+#' extract_config(list(l11=list(
 #'      l21=list(l31=letters, l32=rev(letters)),
 #'      l22=toupper(letters)),
 #'   l12=mtcars$mpg)

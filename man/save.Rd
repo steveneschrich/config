@@ -5,17 +5,17 @@
 \title{Save configuration values to file.}
 \usage{
 save(
-  file = "config.yml",
   config_list = list(),
+  file = "config.yml",
   config = Sys.getenv("R_CONFIG_ACTIVE", "default"),
   overwrite = FALSE
 )
 }
 \arguments{
+\item{config_list}{List of configuration options to be saved to config file.}
+
 \item{file}{Configuration file to write to (defaults to
 \code{"config.yml"}).}
-
-\item{config_list}{List of configuration options to be saved to config file.}
 
 \item{config}{Name of configuration profile to save. Defaults to
 the value of the \code{R_CONFIG_ACTIVE} environment variable

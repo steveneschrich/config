@@ -17,3 +17,8 @@ TRUE if all reference entries are in the config list, FALSE otherwise.
 \description{
 Verify config contains all reference entries
 }
+\examples{
+ \dontrun{
+ check("config_file","reference_file")
+ }
+}
