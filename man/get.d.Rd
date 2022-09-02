@@ -4,12 +4,12 @@
 \alias{get.d}
 \title{Get config from multiple individual files}
 \usage{
-get.d(dir, pattern = "*.conf", ...)
+get.d(dir, pattern = "*.yml", ...)
 }
 \arguments{
 \item{dir}{The directory to use for config files.}
 
-\item{pattern}{(default *.conf) File pattern for config files.}
+\item{pattern}{(default *.yml) File pattern for config files.}
 
 \item{...}{Any other parameters to pass to \code{\link[=get]{get()}}.}
 }

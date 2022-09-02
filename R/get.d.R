@@ -4,7 +4,7 @@
 #' and merge.
 #'
 #' @param dir The directory to use for config files.
-#' @param pattern (default *.conf) File pattern for config files.
+#' @param pattern (default *.yml) File pattern for config files.
 #' @param ... Any other parameters to pass to [config::get()].
 #'
 #' @return A configuration list (see [config::get()]).
@@ -16,7 +16,9 @@
 #' \dontrun{
 #' conf <- get.d(dir = "config.d")
 #' }
-get.d <- function(dir, pattern="*.conf", ...) {
+get.d <- function(dir, pattern="*.yml", ...) {
+
+  # TODO: This needs to be more defensive. No files found, etc.
 
   # Load all configuration
   # We are trying to use package config, which does allow a merge of configuration options.
