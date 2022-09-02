@@ -110,7 +110,7 @@ get <- function(value = NULL,
   active_config <- eval_recursively(active_config)
 
   # return either the entire config or a requested value
-  if (!is.null(value))
+  if (!is.null(value) && is.atomic(value))
     extract_config(active_config, key = value)
   else
     structure(active_config, config = config, file = file)
